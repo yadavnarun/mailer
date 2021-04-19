@@ -5,18 +5,18 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 
-scn = ["20U03027"]
+scn = ["person1"]
 
-fromaddr = "verydopeperson@gmail.com"
+fromaddr = "mail@gmail.com"
 s = smtplib.SMTP('smtp.gmail.com', 587) # creates SMTP session
 
 # start TLS for security
 s.starttls()
-s.login(fromaddr, "DopePerson123")
+s.login(fromaddr, "password")
 
 for scholar in range(len(scn)):
 
-  toaddr = scn[scholar] + "@iiitbhopal.ac.in"
+  toaddr = scn[scholar] + "@somemail"
 
   print(toaddr)
 
